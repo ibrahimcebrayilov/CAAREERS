@@ -1,0 +1,108 @@
+.textcontent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    flex-wrap: wrap;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 30%;
+        height: 100%;
+        flex-direction: column;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        em {
+            font-size: 18px;
+            color: rgb(99, 98, 98);
+            padding: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .contactForm {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 50%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .text {
+                display: flex;
+                flex-wrap: wrap;
+
+
+                input {
+                    padding: 10px 30px;
+                    font-size: 16px;
+                    flex: 1 1 45%;
+                }
+            }
+
+            textarea {
+                padding: 10px;
+                height: 110px;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+            button {
+                padding: 10px;
+                border: 2px solid red;
+                cursor: pointer;
+                margin-top: 10px;
+
+                &:hover {
+                    background-color: red;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .textcontent {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+
+        .content,
+        .contactForm {
+            width: 90%;
+            height: auto;
+            align-items: flex-start;
+        }
+
+        .contactForm {
+            align-items: center;
+
+            form {
+                width: 100%;
+
+                .text {
+                    flex-direction: column;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
